@@ -8,15 +8,43 @@ symb = "X"
 
 
 
-step = 0
-while step <= 9 :
+while True:
    row = int(input("Enter your number of row: "))
    column = int(input ("Enter your number of column: " ))
    matrix[row][column] = symb
-   step += 1
 
    for i in range(len(matrix)):
       print(f"{matrix[i][0]} | {matrix[i][1]} | {matrix[i][2]}")
+
+   if matrix[0][0] == symb and matrix[0][1] == symb and matrix[0][2] == symb:
+      print(f"You are Winner {symb}")
+      break
+   if matrix[0][0] ==symb and matrix[1][0] == symb and matrix[2][0] == symb:
+      print(f"You are Winner {symb}")
+      break
+   if matrix[2][0] == symb and matrix[1][1] == symb and matrix[0][2] == symb:
+      print(f"You are Winner {symb}")
+      break
+   
+   if matrix[0][0] ==symb and matrix[1][1] == symb and matrix[2][2] == symb:
+      print(f"You are Winner {symb}")
+      break     
+   if matrix[2][0] ==symb and matrix[1][1] == symb and matrix[0][2] == symb:
+      print(f"You are Winner {symb}")
+      break          
+       
+      
+   if matrix[0][0] ==symb and matrix[1][0] == symb and matrix[2][0] ==symb:
+      print(f"You are Winner {symb}")
+      break    
+   if matrix[0][1] ==symb and matrix[1][1] == symb and matrix[2][1] == symb:
+      print(f"You are Winner {symb}")
+      break    
+   if matrix[0][2] ==symb and matrix[1][2] == symb and matrix[2][2] == symb:
+      print(f"You are Winner {symb}")
+      break 
+
+
 
    print(matrix)  
    if symb == "X":
@@ -24,33 +52,7 @@ while step <= 9 :
    else: symb = "X" 
 
    # logic of winner
-   if matrix[0][0] =="X" and matrix[0][1] == "X" and matrix[0][2] == "X":
-      print("You are Winner")
-      break
-   if matrix[0][0] =="X" and matrix[1][0] == "X" and matrix[2][0] == "X":
-      print("You are Winner")
-      break
-   if matrix[2][0] =="X" and matrix[1][1] == "X" and matrix[0][2] == "X":
-      print("You are Winner")
-      break
    
-   if matrix[0][0] =="X" and matrix[1][1] == "X" and matrix[2][2] == "X":
-      print("You are Winner")
-      break     
-   if matrix[2][0] =="X" and matrix[1][1] == "X" and matrix[0][2] == "X":
-      print("You are Winner")
-      break          
-       
-      
-   if matrix[0][0] =="X" and matrix[1][0] == "X" and matrix[2][0] == "X":
-      print("You are Winner")
-      break    
-   if matrix[0][1] =="X" and matrix[1][1] == "X" and matrix[2][1] == "X":
-      print("You are Winner")
-      break    
-   if matrix[0][2] =="X" and matrix[1][2] == "X" and matrix[2][2] == "X":
-      print("You are Winner")
-      break 
 
 
 
